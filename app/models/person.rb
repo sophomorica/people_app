@@ -1,8 +1,9 @@
 class Person < ApplicationRecord
 
-  def self.by_first_name
+  def self.name_order
     order(:first_name)
   end
+
   def full_name
     "#{self.first_name} #{self.last_name}"
   end

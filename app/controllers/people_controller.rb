@@ -1,6 +1,7 @@
 class PeopleController < ApplicationController
   def index
-    @people = Person.all
+    # @people = Person.order(:first_name)
+    @people = Person.name_order
   end
 
   def show
@@ -40,6 +41,6 @@ class PeopleController < ApplicationController
 
   private
   def person_params
-    params.require(:person).permit(:first_name, :last_name, :age, :gender, :hair_color, :eye_color)
+    params.require(:person).permit(:first_name, :last_name, :age, :gender, :hair_color, :eye_color, :alive)
   end
 end
