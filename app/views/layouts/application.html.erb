@@ -4,13 +4,17 @@
     <title>PeopleApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css"
+    />
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-   <nav>
+   <nav class= "navbar">
     <%= render 'layouts/navbar' %>
     </nav>
     <%= yield %>
