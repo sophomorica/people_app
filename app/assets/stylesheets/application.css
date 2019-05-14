@@ -10,6 +10,7 @@ h2{
   color:blue;
   font-size: 30px;
   text-shadow: 2px 2px 2px black;
+  text-align: center;
 }
 p{
   text-align: center;
@@ -22,8 +23,14 @@ p{
 .person-container{
   display:flex;
   flex-direction: column;
+  padding: 20px;
 }
 button{
- color: green;
+  color: green;
+}
+.button-div{
+  display:flex;
+  justify-content: space-around;
+  align-content: center;
 }
 
