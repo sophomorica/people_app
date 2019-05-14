@@ -1,14 +1,27 @@
-<h1>People People</h1>
+<h1 class= "header">People People</h1>
 <button class="button"><%= link_to "New", new_person_path%></button>
 <hr />
-
+<div class= container>
 <% @people.each do |person|%>
 
+<div class = person-container>
+<div class = person-info>
 <h2><%= person.full_name %></h2>
 <p><%= person.alive_or%></p>
-<button class="button"><%= link_to "More", person_path(person.id)%></button>
-<button class="button"><%= link_to "Edit", edit_person_path(person.id)%></button>
+</div>
+<div class= "button-div">
+<button class="button is-success">
+<%= link_to "More", person_path(person.id)%>
+</button>
 
-<button class= "button"><%= link_to "Delete", person_path(person), method: :delete%></button>
+<button class="button is-warning">
+<%= link_to "Edit", edit_person_path(person.id)%>
+</button>
 
+<button class= "button is-danger">
+<%= link_to "Delete", person_path(person), method: :delete%>
+</button>
+</div>
+</div>
 <%end%>
+</div>
