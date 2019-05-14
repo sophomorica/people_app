@@ -1,4 +1,5 @@
-<h1>Fill out the new Person</h1>
+<h1>Edit Info</h1>
+
 
 <%= form_for @person do |f|%>
 <%= f.label :first_name %>
@@ -19,8 +20,8 @@
 <%= f.label :gender%>
 <%= f.text_field :gender%>
 
-<%= f.label :alive%>
-<%= f.check_box :alive%>
+<%= f.label :alive%> <br/>
+<%= f.check_box :alive%><br/>
 
 <%= f.submit%>
 <% end %>
