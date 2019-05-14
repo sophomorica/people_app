@@ -7,5 +7,6 @@ class PeopleController < ApplicationController
   end
 
   def new
+    
   end
 end
